@@ -1,47 +1,47 @@
-# import random
+import random
 
-# def select_word():
-#     word_list = ['apple', 'banana', 'grape', 'orange', 'mango', 'melon']
-#     return random.choice(word_list)
+def select_word():
+    word_list = ['apple', 'banana', 'grape', 'orange', 'mango', 'melon']
+    return random.choice(word_list)
 
-# def show_word_progress(word, guessed_chars):
-#     return ' '.join(char if char in guessed_chars else '_' for char in word)
+def show_word_progress(word, guessed_chars):
+    return ' '.join(char if char in guessed_chars else '_' for char in word)
 
-# def hangman():
-#     word_to_guess = select_word()
-#     guessed_characters = set()
-#     attempts_remaining = 6
+def hangman():
+    word_to_guess = select_word()
+    guessed_characters = set()
+    attempts_remaining = 6
 
-#     print("Welcome to Hangman!")
-#     print("Try to guess the word one letter at a time.")
-#     print(show_word_progress(word_to_guess, guessed_characters))
+    print("Welcome to Hangman!")
+    print("Try to guess the word one letter at a time.")
+    print(show_word_progress(word_to_guess, guessed_characters))
 
-#     while attempts_remaining > 0:
-#         guess = input("Guess a letter: ").lower()
+    while attempts_remaining > 0:
+        guess = input("Guess a letter: ").lower()
 
-#         if guess in guessed_characters:
-#             print("You have already guessed that letter. Try again.")
-#         elif guess in word_to_guess:
-#             guessed_characters.add(guess)
-#             print("Good guess!")
-#         else:
-#             guessed_characters.add(guess)
-#             attempts_remaining -= 1
-#             print(f"Wrong guess! You have {attempts_remaining} attempts left.")
+        if guess in guessed_characters:
+            print("You have already guessed that letter. Try again.")
+        elif guess in word_to_guess:
+            guessed_characters.add(guess)
+            print("Good guess!")
+        else:
+            guessed_characters.add(guess)
+            attempts_remaining -= 1
+            print(f"Wrong guess! You have {attempts_remaining} attempts left.")
 
-#         current_progress = show_word_progress(word_to_guess, guessed_characters)
-#         print(current_progress)
+        current_progress = show_word_progress(word_to_guess, guessed_characters)
+        print(current_progress)
 
-#         if '_' not in current_progress:
-#             print("Congratulations! You've guessed the word correctly!")
-#             break
-#     else:
-#         print(f"Game over! The word was '{word_to_guess}'.")
+        if '_' not in current_progress:
+            print("Congratulations! You've guessed the word correctly!")
+            break
+    else:
+        print(f"Game over! The word was '{word_to_guess}'.")
 
-# if __name__ == "__main__":
-#     hangman()
+if __name__ == "__main__":
+    hangman()
 
-
+# New method to creating Same game 
 
 import random 
 print ("Welcome to Hangama")
